@@ -1,5 +1,4 @@
-Bonjour Madame ,
-voici les étapes pour exécuter le code :
+Les étapes pour exécuter le code :
 1) importer le dossier backend dans eclipse 
 2) créer une BD sous le nom "car_rental  dans phpmyadmin
 3) Exécuter chaque microservice dans le backend (run as --> java application)
