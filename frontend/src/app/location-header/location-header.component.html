@@ -1,0 +1,74 @@
+<div
+  class="card container-fluid fixed-top rounded"
+  style=" background :whitesmoke ; padding-top: 8px; padding-bottom: 12px"
+>
+  <div class="ui-g ui-fluid">
+
+    <div class="ui-g-12 ui-sm-3 ui-md-3">
+      <div class="div-margin" style="margin-top: 2px">
+        I need my vehicle near
+      </div>
+
+      <div style="margin-top: 5px;">
+        <div>
+          <select
+            class="form-control shadow-none outline-none"
+            id="locationMenu"
+            (change)="setLocality()"
+          >
+            <option
+              id="locality"
+              [value]="location.locality"
+              *ngFor="let location of locations"
+              [selected]="option === selectedOption"
+              >{{ location.locality }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3 ui-sm-3">
+      <div class="div-margin">Select your pickup date</div>
+      <!-- <button class="btn  shadow-none "> -->
+      <div class=" border-dark" style="margin-top: 6px">
+        <p-calendar
+          [(ngModel)]="valuePickup"
+          [showTime]="true"
+          hourFormat="12"
+          [minDate]="minimumDate"
+          dateFormat="dd MM yy"
+        ></p-calendar>
+      </div>
+      <!-- </button> -->
+    </div>
+    <div class="ui-g-12 ui-md-3 ui-sm-3">
+      <div class="div-margin">Select your drop date</div>
+      <div style="margin-top: 6px" (click)="checkDate()">
+        <p-calendar
+          [(ngModel)]="valueDrop"
+          [showTime]="true"
+          hourFormat="12"
+          [minDate]="valuePickup"
+          dateFormat="dd MM yy"
+          [showOnFocus]="visible"
+        ></p-calendar>
+      </div>
+    </div>
+    <div class="ui-g-12 ui-md-3 ui-sm-3 text-center">
+      <div class="div-margin" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div style="margin-top: 6px" >       
+        <button
+          class="btn btn-success form-control"
+          (click)="runValidations()"
+          (click) = "setLocality()"
+          (click) = "getAvailableCars()"
+          
+        >
+          Search
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+

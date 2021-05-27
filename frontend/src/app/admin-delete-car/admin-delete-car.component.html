@@ -1,0 +1,23 @@
+<h1 class="text-center">Delete Cars</h1>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-12" style="margin-left: 150px; float: right;">
+            <div class="row">
+                <div class="card" style="width: 25%; margin-left: 15px; margin-bottom: 15px; margin-top: 10px; box-shadow: none;"
+                    *ngFor="let car of allCars">
+                    <img src={{car.imageUrl}} class="card-img-top" alt="...">
+
+                    <div class="card-body" style="margin-top: -30px; text-align: center;">
+                        <hr>
+                        <h6>Rs. {{car.bookingPrice}}</h6>
+                        <hr>
+                        <h5 class="card-title">{{car.carName}}</h5>
+                        <h6 class="card-title">{{car.carType}}</h6>
+                        <p class="card-text">{{car.numOfSeats}} Seater, 2 Airbag, {{car.transmissionType}}, {{car.fuelType}}</p>
+                        <button class="btn btn-danger" style="color: white;" (click)="alertBox(car.id)" >Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

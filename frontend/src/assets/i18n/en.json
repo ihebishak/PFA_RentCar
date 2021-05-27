@@ -1,0 +1,196 @@
+{
+
+    "footer":
+    {
+        "p_8" : "We are a young company always looking for new and creative ideas to help you with our products in your everyday work.",
+        "p_10": "Our Team",
+        "img_15" : "Contacts",
+        "p_18" : "Phone: +917347299442",
+        "p_19" : "Email:",
+        "p_20":  "Skype: you_online",
+        "h_25" : "Change The website Language",
+        "p_30" : "Home",
+        "p_31" : "Features",
+        "p_32" : "About",
+        "p_33" : "Policies",
+        "p_36" : "Plans",
+        "p_37" : "Affiliates",
+        "p_38" : "Terms"
+
+
+    },
+    "pro":
+    {
+       
+    },
+    
+
+    "header":
+    {
+        "a_11" : "Home",
+        "a_15" : "About",
+        "a_19" : "About",
+        "a_23" : "Contact",
+        "h_139" : "Pickup location",
+        "l_155" : "Enter address",
+        "h_214" : "Welcome to Enet'car"
+
+
+
+    },
+
+    "car-select":
+    {
+        "h_11" : "Select your Fuel package",
+        "b_15" : "without fuel",
+        "b_17" : "With fuel",
+        "p_21" : "Current package",
+        "b_22" : "No fuel",
+        "l_25" : "You will be charged per km driven at the end of the trip.",
+        "l_27" : "You will not be reimbursed for fuel expenses.",
+        "l_28" : "You must return the vehicle with the same amount of fuel as when picked up",
+        "p_36" : "Current Package",
+        "s_52" : "Filter",
+        "a_53" : "Clear all",
+        "p_55" : "Car Type",
+        "p_69" : "Transmission type",
+        "b_73" : "Manual",
+        "b_75" : "Automatic",
+        "b_78" : "Fuel Type",
+        "b_90" : "Apply Filters",
+        "s_147": "Choose",
+        "a_151": "Price -  Low to High",
+        "a_152": "Price - High to Low",
+        "b_171": "Quick view" ,
+        "b_141": "Sort By "
+
+
+    },
+
+    "cardetail" : 
+
+        {
+            "p_27" : " Note:The image is for representation purpose only. The colour of the actual car may vary",
+            "b_47" : "Selected fuel package",
+            "p_59" : " There is no travel limit. ₹ 2/km distance charge will be applied over the booking amount. Fuel bills are not reimbursed in this package.",
+            "d_73" : "Pickup & Drop",
+      
+            "d_158" :"Guidelines & Policies",
+            "l_163" : " Please carry your original driving license along with an additional id proof when you come to pick up your car",
+
+            "l_171" : "  Our cars have a maximum speed limit of 120 km/h. Over speeding will attract fines",
+            "l_174" : "  Our cars have a maximum speed limit of 120 km/h. Over speeding will attract fines",
+            "d_185" : "Fare Details",
+            "s_228" : "    You are just one step away from confirming your booking. Confirm that you are above 18 and you agree to all the terms mentioned in",
+            "b_242" : "Quick Book",
+            "s_208" : "Total"
+
+
+
+
+        },
+
+      "upload-file":
+      {
+          "h_17":"Provide Information",
+          "h_23":"upload License",
+          "l_25":"Upload clear front and back images of the original driving license",
+          "l_26":"Photo, license number and date of birth should be clearly visible",
+          "l_27":"A valid 4 wheeler license is must to drive a car and a valid 2 wheeler to drive a bike",
+          "l_28":"Learner's license is not a valid government ID proof",
+          "l_29":"Once a license is linked to an account, it cannot be modified.",
+          "d_38":"Upload Front Image",
+          "d_44":"Upload Back Image",
+          "b_80":"Upload License"
+      },
+      "payment":
+      {
+          "b_2":"Congratulations",
+          "h_8":"Billing Details",
+          "l_10":"First Name",
+          "l_12":"Last Name",
+          "l_14":"Email id",
+          "h_19":"Payment Options",
+          "l_75":"Edit",
+          "l_76":"Delete",
+          "s_105":"Car Wallet",
+          "s_108":"Balance",
+          "h_132":"Edit Card",
+          "b_162":"Cancel",
+          "b_163":"Confirm",
+          "h_174":"Are you sure",
+          "p_179":"Do you really want to delete these records? This process cannot be undone.",
+          "b_182":"Cancel",
+          "b_183":"Delete"
+      },
+
+      "baners":
+      {
+
+          "a_56" : "Choose Your Car Now !",
+          "h_70" : "Enet'car Advantage",
+          "h_186":"How Enet'car works",
+          "p_71":"We simplified car rentals, so you can focus on what's important to you",
+          "h_83":"Fuel Cost Included",
+          "p_84":"Don't worry about mileage! All fuel costs are included. If you refill fuel, we'll pay you back!",
+          "h_91":"No Hidden Charges",
+          "p_92":"Our prices include taxes and insurance.What you see is what you really pay!",
+          "h_101":"Flexi Pricing Packages",
+          "p_102":"One size never fits all! Choose a balance of time and kilometers that works best for you.",
+          "h_109":"Go Anywhere",
+          "p_110":"Our cars have all-Tunisia permits. Just remember to pay state tolls and entry taxes.",
+          "h_117":"24x7 Roadside Assistance",
+          "p_118":"We have round-the-clock, pan Tunisia partners. Help is never far away from you.",
+          "h_125":"Damage Insurance",
+          "p_126":"All your bookings include damage insurance! Drive safe, but don’t worry!",
+          "h_137":"OFFERS",
+          "p_188":"Drive yourself to an adventure and back in 5 simple steps",
+          "h_202":"BOOK",
+          "p_203":"Search for and book a car on our site!",
+          "h_214":"UPLOAD LICENSE",
+          "p_215":"Upload your driver’s license, and pay a small security deposit.",
+          "h_223":"UNLOCK",
+          "p_224":"We mail your car details 20 minutes before pickup.",
+          "p_234":"ZOOM",
+          "p_235":"Fill the start checklist. Grab the keys from the glove-box and drive.",
+          "h_244":"RETURN",
+          "p_245":"Return the car to the same location and fill the end checklist to end your trip",
+          "p_255" : "Our Team"
+           
+
+      },
+      "profile":
+      {
+          "l_5" : "Total Distance",
+          "l_7" : "Total Hours",
+          "d_18" : "Full Name",
+          "d_19" : "Email ID",
+          "d_20" : "Mobile Number",
+          "s_26" : "Edit",
+          "s_32" : "Edit",
+          "s_38" : "Edit",
+          "b_46" : "Upload License", 
+          "a_01": "Personal Information",
+          "a_02": "Full Name",
+          "a_03": "Mobile No.",
+          "a_04": "E-mail ID",
+          "a_05": "Upload License"
+      },
+
+      "dashboard":
+      {
+          "h_6":"Hi",
+          "h_12" : "Profile",
+          "h_17" : "My Bookings",
+          "h_22" : "My Wallet",
+          "h_27" : "My Cards",
+          "h_32" : "Change Password",
+          "h_37" : "Logout",
+          "h_57" : "Messages",
+          "d_63" : "You have successfully logged out",
+          "b_70" : "Close"
+      }
+
+      
+
+}

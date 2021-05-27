@@ -1,0 +1,52 @@
+<div class="">
+    <div>
+        <img src="/assets/user.png" alt="user">
+       <br><br>
+      
+    </div>
+    <div class="row shadow-lg p-3 mb-5 bg-white rounded tab">
+        <div class="col-md-8 col-sm-8 col-12 insideTab">
+            <label for="personalInfoHeading">
+                <h5>Personal Information</h5>
+            </label>
+            <div class="detail row">
+                <div class="col-md-6 col-sm-6 col-6">
+                    <div class="detailLabelName"><label for="userName">Full Name</label></div>
+                    <div class="detailLabelName"><label for="phone">Mobile No.</label></div>
+                    <div class="detailLabelName"><label for="email">E-mail ID</label></div>
+                
+                </div>
+                <div class="col-md-6 col-sm-6 col-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Name" id="userName" name="userName" [(ngModel)]="user.fullName" disabled="">
+                        <div class="input-group-append">
+                            <span id="nameEditBtn" (click)="updateUser('nameEditBtn','userName')" class="input-group-text bg-info">Edit</span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="phone" id="phone" name="phone" [(ngModel)]="user.phone" disabled="">
+                        <div class="input-group-append">
+                            <span id="phoneEditBtn" (click)="updateUser('phoneEditBtn','phone')" class="input-group-text bg-info" >Edit</span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email" id="email" name="email" [(ngModel)]="user.email" disabled="">
+                        <div class="input-group-append">
+                            <span id="mailEditBtn" (click)="updateUser('mailEditBtn','email')" class="input-group-text bg-info" >Edit</span>
+                        </div>
+                    </div>
+            
+
+          
+        </div>
+    </div>
+</div>
+
+        <div class="col-md-3 upload-license">
+            <button class="btn btn-success btn-lg" id="licenseBtn" (click)=uploadLicenseHandler()><i id="licenceBtnIcon" class="fa fa-upload" aria-hidden="true" (click)="uploadLicenese()"></i>
+                Upload License
+            </button>
+        </div>
+        <!-- <app-upload-file></app-upload-file> -->
+    </div>
+       <app-upload></app-upload>

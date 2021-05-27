@@ -1,0 +1,40 @@
+tr,th,td{
+    /* border: solid 3px pink; */
+    padding: auto;
+    margin: auto;
+}
+td{
+    text-align: center;
+}
+
+.main-date-container{
+    text-align: center;
+    background-size: contain;
+    background-image:url('/assets/booked.png') ;
+    background-position:top ;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.panel{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.booked-container{
+    background: linear-gradient(143deg, rgba(236,211,106,0.3449754901960784) 40%, rgba(242,244,185,0.29175420168067223) 61%);
+    margin: auto;
+}
+.booked-container-background{
+    background-image: url("assets/noActiveBooking.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+h4{
+    font-family: 'Bookman';
+    font-weight: bold;
+}
+h1{
+    font-weight: 700;
+    size: 150%;
+}

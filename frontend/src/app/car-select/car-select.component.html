@@ -1,0 +1,142 @@
+
+<app-location-header (childEvent)="cars=$event"></app-location-header>
+
+<div class="container-fluid" style="margin-top:110px">
+    <div class="row">
+        <div class="col-md-3" style="float: left; margin-left: 10px;">
+            <div class="row">
+                <div class="card shadow" style="width: 100%; margin-bottom: 10px;">
+                    <div class="card-body">
+                        <h6 class="card-text">{{'car-select.h_11'|translate}}</h6>
+                        <hr>
+                        <div class="rounded border"> <span>
+                                <button (click)="onWithoutFuelSelect()" id="withoutFuel"
+                                    style="width: 49%; margin-right: 1%; background-color: #3aa5c5; color: white;"  class="btn">{{'car-select.b_15'|translate}}</button>
+                                <button (click)="onWithFuelSelect()" id="withFuel" style="width: 50%;"
+                                    class="btn">{{'car-select.b_17'|translate}}</button>
+                            </span> </div>
+
+                        <div style="margin-top: 10px;" *ngIf="!flag">
+                            <p style="font-size: 13px;">{{'car-select.p_21'|translate}}</p>
+                            <button disabled class="btn fuel-Button">{{'car-select.b_22'|translate}}</button>
+                            <div style="margin-top: 10px; ">
+                               
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 10px" *ngIf="flag">
+                            <div class="card-body">
+                                <p style="font-size: 13px;">{{'car-select.p_36'|translate}}</p>
+                                <button (click)="filter60Color()" id="60km" value = "60" class="btn border rounded"
+                                    style="margin-right: 2%;">60 Kms</button>
+                                <button (click)="filter120Color()" id="120km" value = "120" class="btn border rounded"
+                                    style="margin-right: 2%;" style="margin-left: 10px;">120 Kms</button>
+                                <button (click)="filter180Color()" id="180km" value = "180" class="btn border rounded"
+                                    style="margin-top: 10px;">180 Kms</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 100%;">
+                    <div class="card-body">
+
+                        <div style="margin-bottom: 25px;">
+                            <span style="font-size: 17px; font-weight: 600;">{{'car-select.s_52'|translate}}</span>
+                            <a (click)="clearAll()" class="float-right">{{'car-select.a_53'|translate}}</a>
+                        </div>
+                        <p style="font-size: 13px;">{{'car-select.p_55'|translate}}</p>
+
+                        <div style="margin-bottom: 25px;">
+                            <button class="btn border rounded" id="hatchback" style="margin-right: 4%; width: 120px;"
+                                (click)="toggleHatchback()">Hatchback</button>
+                            <button class="btn border rounded" id="sedan" style=" width: 120px"
+                                (click)="toggleSedan()">Sedan
+                            </button>
+                            <button class="btn border rounded" id="suv"
+                                style="margin-top: 10px;margin-right: 4%; width: 120px;"
+                                (click)="toggleSUV()">SUV</button>
+                            <button class="btn border rounded" id="miniSuv" style="margin-top: 10px; width: 120px;"
+                                (click)="toggleMiniSUV()">Mini-SUV</button>
+                        </div>
+                        <p style="font-size: 13px;">{{'car-select.p_69'|translate}}</p>
+
+                        <div style="margin-bottom: 25px;">
+                            <button class="btn border rounded" id="manual" style="margin-right: 4%; width: 120px;"
+                                (click)="displayManual()">Manual</button>
+                            <button class="btn border rounded" id="automatic" style=" width: 120px"
+                                (click)="displayAutomatic()">Automatic
+                            </button>
+                        </div>
+                        <p style="font-size: 13px;">{{'car-select.b_78'|translate}}</p>
+
+                        <div style="margin-bottom: 25px;">
+                            <button class="btn border rounded" id="petrol" style="margin-right: 4%; width: 120px;"
+                                (click)="displayPetrol()">Petrol</button>
+                            <button class="btn border rounded" id="diesel" style=" width: 120px"
+                                (click)="displayDiesel()">Diesel
+                            </button>
+                        </div>
+                    <hr>
+                        <div class="text-center">
+                            <button class="btn border rounded btn-success" id="applyFilters" style=" width:120px;" (click)="filterApply()">
+                                 {{'car-select.b_90'|translate}}</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8" style="margin-left: 10px; float: right;">
+            <div class="row">
+                <div style="width: 100%; margin-left: 10px;">
+                    <div class="row">
+                        <div class="col-md-9 ">
+                            <br>
+                        </div> 
+                        <div class="col-md-3 col-sm-3">
+                            <div class="btn-group border rounded float-right" style="width: 300px;">
+                                <button style="background-color: lightgrey; width: 100px; " type="button" disabled class="btn">
+                                    {{'car-select.b_141'|translate}}</button>
+                                <div class="btn-group sort">
+                                    <button style="background-color: white; width: 200px; " type="button" class="btn dropdown-toggle"
+                                        data-toggle="dropdown">
+                                        <span id="selected">
+                                        {{'car-select.s_147'|translate}}
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu" id="sortMenu">
+                                        <a class="dropdown-item" (click)="sortByPriceAsc()" >{{'car-select.a_151'|translate}}</a>
+                                        <a class="dropdown-item" (click)="sortByPriceDesc()" >{{'car-select.a_152'|translate}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="card" style="width: auto; margin-left: 10px; margin-bottom: 15px; margin-top: 10px;"
+                    *ngFor="let car of cars">
+                    <div class="text-center">
+                    <img src={{car.imageUrl}} style="width: 70%;" class="card-img-top">
+                    </div>
+
+                    <div class="card-body" style="margin-top: -30px; text-align: center;">
+                        <hr>
+                        <h6>Price : {{car.bookingPrice}} DT</h6>
+                        <hr>
+                        <h5 class="card-title">{{car.carName}}</h5>
+                        <h6 class="card-title">{{car.carType}}</h6>
+                        <p class="card-text">{{car.numOfSeats}} Seater, 2 Airbag, {{car.transmissionType}}, {{car.fuelType}}, {{car.pricePerKm}}DT/KM</p>
+                        <button class="btn btn-info" (click)="runValidation(car.id)">{{'car-select.b_171'|translate}}</button>
+                    </div>
+                </div>
+
+                
+           
+            </div>
+        </div>
+    </div>
+</div>

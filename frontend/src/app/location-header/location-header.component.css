@@ -1,0 +1,24 @@
+
+/* .container-fluid
+{
+  /* max-width: 100%;
+  overflow-x:hidden; */
+
+.container-fluid{
+  max-width: 100%;
+}
+.div-margin{
+    font-size: 12px;
+  }
+
+  p-calendar.myStyleClass {
+    color: #000;
+  } 
+ 
+  body{
+    background: gray;
+  }
+
+  .no-outline{
+    outline: none;
+  }

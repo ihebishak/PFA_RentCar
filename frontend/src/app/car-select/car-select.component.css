@@ -1,0 +1,74 @@
+.fuel-Button{
+    width: 100%;
+    border: 1px solid black;
+    border-color: #5bc0de;
+    color: darkgreen;
+    align-content: center;
+}
+.text{
+    font-size: 11px;
+    color: gray;
+}
+.sort{
+    border: 1px ;
+    border-color: green;
+    color: grey;
+    align-content: center;
+}
+.pointer{
+    cursor: pointer;
+}
+.venue-detail-block
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top:16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #dde2e8;
+    font-family: proxima-nova;
+}
+.pickup-venue-block
+{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    max-width: 320px;
+    font-family : proxima-nova;
+}
+
+.venue-name-icon
+{
+    display: flex;
+    font-family: proxima-nova;
+
+}
+.venue-address
+{
+    color : #77899b;
+    font-size : 12px;
+    font-weight :300;
+    line-height: 17px;
+    padding-top : 4px;
+    font-family : proxima-nova;
+    text-rendering : optimizeLegibility;
+}
+.venue-distance
+{
+    color : #1f2d3d;
+    font-size : 12px;
+    font-weight:300;
+    line-height:17px;
+    padding-top:4px;
+    font-family:proxima-nova;
+    text-rendering : optimizeLegibility;
+}
+.drop-venue-block
+{
+    display : flex;
+    flex-direction: column;
+    background: #fff;
+    align-items: flex-end;
+    max-width: 320px;
+    font-family: proxima-nova;
+    text-rendering: optimizeLegibility;
+}

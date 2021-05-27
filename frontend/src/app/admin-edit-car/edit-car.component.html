@@ -1,0 +1,89 @@
+<h1 class="text-center">Edit Cars</h1>
+<div class="container-fluid" style="margin-top:50px">
+        <div class="row">
+            <div class="col-md-12" style="margin-left: 150px; float: right;">
+                <div class="row">
+                    <div class="card" style="width: 25%; margin-left: 15px; margin-bottom: 15px; margin-top: 10px; box-shadow: none;"
+                        *ngFor="let car of allCars">
+                        <img src={{car.imageUrl}} class="card-img-top" alt="...">
+    
+                        <div class="card-body" style="margin-top: -30px; text-align: center;">
+                            <hr>
+                            <h6>Rs. {{car.bookingPrice}}</h6>
+                            <hr>
+                            <h5 class="card-title">{{car.carName}}</h5>
+                            <h6 class="card-title">{{car.carType}}</h6>
+                            <p class="card-text">{{car.numOfSeats}} Seater, 2 Airbag, {{car.transmissionType}}, {{car.fuelType}}</p>
+                            <button class="btn btn-success" style="color: white;" data-toggle="modal" data-target="#editCar"
+                             (click)="getCarById(car.id)" >Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editCar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Edit Cars</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                        <div class="form"> 
+                                <label>Car Name</label>
+
+                                <input id="carName" class="form-control" value={{car.carName}} type="text">
+    
+                                <label>Location</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="location" class="form-control" value={{car.location}} type="text">
+    
+                                <label>City</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="city" class="form-control" value={{car.city}} type="text">
+    
+                                <label>Booking Price</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="bookingPrice" class="form-control" value={{car.bookingPrice}} type="number">
+    
+                                <label>Car Type</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="carType" class="form-control" value={{car.carType}} type="text">
+    
+                                <label>Fuel Type</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="fuelType" class="form-control" value={{car.fuelType}} type="text">
+    
+                                <label>Num of Seats</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="numOfSeats" class="form-control" value={{car.numOfSeats}} type="number">
+    
+                                <label>Transmission Type</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="transmissionType" class="form-control" value={{car.transmissionType}} type="text">
+    
+                                <label>Price Per KM</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="pricePerKm" class="form-control" value={{car.pricePerKm}} type="number">
+    
+                                <label>Image Url</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="image" class="form-control" value={{car.imageUrl}} type="text">
+
+                                <label>Is Booked</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="isBooked" class="form-control" value={{car.isBooked}} type="text">
+                             </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" (click)="editCar(car.id)">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    

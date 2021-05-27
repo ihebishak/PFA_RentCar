@@ -1,0 +1,87 @@
+
+
+<div class="container">
+  <!--<h2>Upload Driving License</h2>
+   Button to Open the Modal -->
+  <button type="button" id="openModal2" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" hidden="true">
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">{{'upload-file.h_17'|translate}}</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5><b>{{'upload-file.h_23'|translate}}</b></h5><br><br>
+          <ul>
+            <li>{{'upload-file.l_25'|translate}}</li>
+            <li>{{'upload-file.l_26'|translate}}</li>
+          
+
+          </ul>
+          <br>
+          <div class="container-fluid">   
+            <div class="row">
+              <div class="col-sm-6">
+              <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFileFront($event,fileInput.files)">
+            <div class="uploadfilecontainertext">{{'upload-file.d_38'|translate}}</div>
+            <input hidden type="file" accept='image/*' #fileInput (change)="uploadFileFront($event.target.files,fileInput.files)">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="uploadfilecontainer" (click)="fileInput2.click()" appDragDrop (onFileDropped)="uploadFileBack($event,fileInput2.files)">
+            <div class="uploadfilecontainertext">{{'upload-file.d_44'|translate}}</div>
+            <input hidden type="file" accept='image/*' #fileInput2 (change)="uploadFileBack($event.target.files,fileInput2.files)">
+          </div>
+        </div>
+        <span style="color:red;" *ngIf="message">{{message}}</span>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5" *ngFor="let imgURL of url">
+
+        <img [src]="imgURL" height="200" width="250"><br>
+        </div>
+        <div class="col-sm-1"></div>
+        
+      </div>
+      <br>
+      
+          <div  class="files-list" *ngFor="let file of files;let i= index">
+              <p> {{ file }} </p>
+              <button class="delete-file" (click)="deleteAttachment(i)">
+                <img src="./assets/close_it.jpg">
+              </button>
+           </div>
+          
+        </div>
+
+        </div>
+      
+        
+        <!-- Modal footer -->
+     
+       <div class="modal-footer">
+        <span *ngIf="buttonState;else elseBlock">
+
+        <button type="button" class="btn btn-success" data-dismiss="modal" ><a routerLink="/car/payments" (click)="onUploadFile()" > {{'upload-file.b_80'|translate}}</a></button>
+        </span>
+        <ng-template #elseBlock><button type="button" class="btn btn-success"  style="margin:20px;" disabled>{{'upload-file.b_80'|translate}}</button></ng-template>
+        
+      </div>
+       
+        
+      </div>
+    </div>
+  </div>
+  
+</div>

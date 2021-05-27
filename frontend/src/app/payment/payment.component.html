@@ -1,0 +1,216 @@
+<div class="background">
+    <div class="payment-header row bg-dark ">
+        <div class="col-10 col-md-10 col-sm-10">
+            <h1>Payment Gateway</h1>
+        </div>
+        <div class="col-2 col-md-2 col-sm-2 text-center" style="cursor: pointer;" routerLink="">
+                <h2 class="fas fa-arrow-circle-left"></h2>
+                <h5>Back to Home</h5>
+        </div>
+    </div>
+
+    <div class="row main-container">
+        <div class=" shadow-lg p-3 mb-5 bg-light rounded col-md-6 col-10 col-sm-6 main">
+            <form action="" class="form-group bg-light">
+                <div>
+                    <label for="BillingHeading">
+                        <h4>{{'payment.h_8'|translate}}</h4>
+                    </label><br>
+                    <label for="firstName">{{'payment.l_10'|translate}}</label>
+                    <input type="text" id="biilingPersonFirstName" class="form-control" placeholder="First Name"
+                        required>
+                    <label for="lastName">{{'payment.l_12'|translate}}</label>
+                    <input type="text" id="biilingPersonLastName" class="form-control" placeholder="Last Name" required>
+                    <label for="email">Email Id</label>
+                    <input type="email" id="biilingEmailId" class="form-control" placeholder="Email ID" required>
+                </div>
+
+                <div class="">
+                    <label for="paymentHeading">
+                        <h4>{{'payment.h_19'|translate}}</h4>
+                    </label>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                    <div class="row">
+                                        <div class="col-md-10"><span class="card-name">Credit Card</span>
+                                        </div>
+                                        <div class="col-md-2"><img src="/assets/card.png" alt="Credit Card"></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                <div class="card-body" id="cardArea">
+                                    <div class="inner-form" *ngIf="isCardDetailsEntered">
+                                        <form action="">
+                                            <input type="text" name="creditCardNo" id="creditCardNo"
+                                                placeholder="Card Number" class="form-control" [(ngModel)]='cardNumber'>
+                                            <div class="row">
+                                                <div class="input-group mb-2 col-md-4">
+                                                    <input type="text" id="creditCardExpiryMonth"
+                                                        name="creditCardExpiryMonth" class="form-control"
+                                                        placeholder="MM" (input)="focusYearTab()" maxlength="2"
+                                                        (blur)="blurYearTab()" [(ngModel)]='validMonth'>
+
+                                                    <input type="text" id="creditCardExpiryYear"
+                                                        name="creditCardExpiryYear" class="form-control"
+                                                        placeholder="YY" maxlength="2" [(ngModel)]='validYear'>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" name="creditCvv" id="creditCvv"
+                                                        class="form-control" placeholder="cvv" [(ngModel)]='validCvv' maxlength="3">
+                                                </div>
+                                            </div>
+                                            <input type="text" name="cardHolderName" id="cardHolderName"
+                                                placeholder="Card Holder Name" required class="form-control"
+                                                [(ngModel)]='cardHolderName' [(ngModel)]='validName'>
+                                            <input type="button" value="Add Card" class="form-control bg-success"
+                                                (click)="cardHandler()">
+                                        </form>
+                                    </div>
+
+                                    <!-- Showing new card structure -->
+                                    <div class="container" *ngIf="showCard">
+                                        <div id="card" class="cardView">
+                                            <img src="/assets/chip.png" alt="chip" class="cardChip">
+                                            <label for="cardNumber" id="cardNumberView"
+                                                class="cardNumberStyle">{{cardNumber}}</label>
+                                            <label for="expiryDate" id="expiryDateView" class="expiryDateStyle">VALID
+                                                UPTO
+                                                &nbsp; &nbsp;{{validMonth}}/{{validYear}} </label>
+                                            <label for="cardHolderName" id="cardHolderName"
+                                                class="holderNameStyle">{{cardHolderName}}</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Showing details of multiple cards -->
+                                    <div class="savedCardInfo shadow" *ngIf="isCardSaved">
+                                        <div class="row " ngFor= "let item of cards">
+                                            <div class="col-md-2 col-sm-2 col-2 card-logo-style">
+                                                <img src={{cardLogo}} alt="logo" />
+                                            </div>
+                                            <div class="col-md-7 col-sm-7 col-7">
+                                                <label for="cardLastDigits">Ending with {{item.cardNum}}</label><br>
+                                                <label
+                                                    for="ExpiriesIn">Expires&nbsp;&nbsp;{{item.expMonth}}/{{item.expYear}}</label>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-3">
+                                                <label id="editCard-{{item}}" class="edit-label"
+                                                    (click)="showEditModal(item)">{{'payment.l_75'|translate}}</label>
+                                                &nbsp;|&nbsp;
+                                                <label id="deleteCard-{{item}}" class="delete-label"
+                                                    (click)="showDeleteModal(item)">{{'payment.l_76'|translate}}</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                        <!-- Wallet Payment Option-->
+                       
+                    </div>
+                </div>
+                <input type="submit" value="Pay" class="bg-success pay-button form-control">
+            </form>
+        </div>
+
+        <!-- Payment Summary -->
+        <div class="shadow-lg p-3 mb-5 bg-light rounded col-md-6 col-10 col-sm-6 fare-summary">
+            <table>
+                <tr>
+                    <th>Fare Detail</th>
+                    <td>{{bookingData.car.bookingPrice | currency:'TND'}}</td>
+                </tr>
+                <tr>
+                    <th>Package Charges (Package Selected : {{packageDetail}}Kms)</th>
+                    <td>{{packageAmount |currency:'TND'}}</td>
+                </tr>
+                <td>
+                    <hr>
+                </td>
+                <td>
+                    <hr>
+                </td>
+                <tr>
+                    <th>Total</th>
+                    <td>{{totalAmount|currency:'TND'}}</td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+    <!-- MODAL -->
+    <div class="modal fade" id="editCardModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">{{'payment.h_132'|translate}}</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!-- Text input-->
+                    <div class="row">
+                        <label class="col-md-4 control-label" for="cardDNumber">Number</label>
+                        <div class="col-md-6">
+                            <input id="cardNum" name="cardNumber" type="text" [(ngModel)]='cardNumber'
+                                placeholder="Enter your card Number" autofocus="" class="form-control" required=""
+                                (input)=enableConfirmButton(cardNumber)>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Text input-->
+                    <div class="row">
+                        <label class="col-md-4 control-label" for="month">Enter expiry</label>
+                        <div class="col-md-2">
+                            <input id="month" name="month" type="text" placeholder="MM" [(ngModel)]='validMonth'
+                                class="form-control" required="" (input)=enableConfirmButton(validMonth)>
+                        </div>
+                        <div class="col-md-2">
+                            <input id="year" name="year" type="text" placeholder="YY" [(ngModel)]='validYear'
+                                class="form-control" required="" (input)=enableConfirmButton(validYear)>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" disabled="" id="editConfirmButton">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div id="cardDeleteConfirm" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">{{'payment.h_174'|translate}}</h4>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>{{'payment.p_179'|translate}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info"
+                        data-dismiss="modal">{{'payment.b_182'|translate}}</button>
+                    <button type="button" class="btn btn-danger">{{'payment.b_183'|translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

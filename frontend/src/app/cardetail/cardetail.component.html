@@ -1,0 +1,207 @@
+<app-location-header [pickUp]="pickup" [dropTime]="drop" [headerLocation]="locality"></app-location-header>
+
+<div class="container-fluid " style="margin-top: 110px;width: 100%;">
+    <div  >
+        <div class="left-wrapper box-shadow "
+            style="  border-radius : 6px; box-shadow: 0px 2px 8px -2px rgba(31,45,61,0.4)">
+            <div style="padding : 20px" class="checkout-vehicle-template">
+                <div class="listing-car-body" style="display: flex">
+                    <div class="detail-section style = flex">
+                        <div>
+                            <h3>{{cars.carName}}</h3>
+                        </div>
+
+                        <div class="features car-features" style="padding:1px">
+                            <span>
+                                <br /><br /><i class="fas fa-gas-pump"></i>
+                                {{ cars.fuelType }}
+                            </span>
+                            <span>
+                                <i class="fa fa-users"></i>
+                                {{ cars.numOfSeats }} Seater
+                            </span>
+                        </div>
+                        <br/>
+
+                        <div class="list-item info-text"> 
+                            <p style=" color: #77899b; font-size: 20px">
+                               {{'cardetail.p_27'|translate}}
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="img-section " class=" float-right">
+                        <img  src="{{ cars.imageUrl }}" />
+                    </div>
+                </div>
+            </div>
+
+            <div><br /></div>
+            <div>
+                <hr />
+            </div>
+            <div class="package-details" style="margin-left: 10px;">
+                <div class="btn-group border rounded" style="width: 300px;">
+                    <button style="background-color: lightgrey; width: 120px; " type="button" disabled class="btn">
+                        {{'cardetail.b_47'|translate}}
+                    </button>
+                    <div class="btn-group sort">
+                        <button style="background-color: white; width: 130px; " type="button" disabled class="btn ">
+                            <span id="selected">
+                                {{ carPackage }}
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="info-text">
+                  
+                </div>
+            </div>
+
+            <div>
+                <hr />
+            </div>
+
+            <div class="ride-details" style="padding:20px; display:flex ; flex-direction: column">
+                <div class="pickup-drop-time">
+                    <div class="block-heading  " style="display: flex">
+                        {{'cardetail.d_73'|translate}}
+                    </div>
+                    <div class="start-time " style="display: flex">
+                        <div class="date-time-format">
+                            <div class="left-section">{{ pickup.getDate() }}</div>
+                            <div class="right-section ">
+                                <div class="month-year">
+                                    <label>{{ month[pickup.getMonth()] }} </label>-{{
+                    pickup.getFullYear()
+                  }}
+                                </div>
+
+                                <div class="hour-minute">
+                                    {{ pickup | date: "shortTime" }}
+                                </div>
+                            </div>
+                        </div>
+
+                     
+                        <div class="date-time-format" style="display: flex;align-items: flex-end">
+                            <div class="left-section">{{ drop.getDate() }}</div>
+                            <div class="right-section">
+                                <div class="month-year">
+                                    <label>{{ month[drop.getMonth()] }}</label>-{{ drop.getFullYear() }}
+                                </div>
+                                <div class="hour-minute">
+                                    <span>
+                                        {{ pickup | date: "shortTime" }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-detail-block">
+                    <div class="pickup-venue-block">
+                        <div class="venue-name-icon">
+                            <div class="venue-icon">
+                                <span class="trigger-view">
+                                    <span class="map-icon pointer" style="cursor: pointer;color: black  ">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="venue-name">
+                                        {{ locality }}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="venue-distance">
+                        </div>
+                    </div>
+
+                    <div class="drop-venue-block">
+                        <div class="venue-name-icon">
+                            <div class="venue-icon">
+                                <span class="trigger-view">
+                                    <span class="map-icon pointer">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="venue-name">
+                                        {{ locality }}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="venue-distance">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <hr />
+            </div>
+            <div class="guidelines">
+                <div class="block-heading " style="padding-bottom:8px;padding-left:20px;">
+                   <b> {{"cardetail.d_158"|translate}}</b>
+                </div>
+
+                <ul>
+                    <li class="font" style="font-size: 20px">
+                    {{'cardetail.l_163'|translate}}
+                    </li>
+                   
+                    <li class="font" style="font-size: 20px">
+                        {{'cardetail.l_171'|translate}}
+                    </li>
+
+
+
+                    <li class="font" style="font-size: 20px">
+                        {{'car-select.l_25'|translate}}
+                    </li>
+                    <li class="font" style="font-size: 20px">
+                        {{'car-select.l_27'|translate}}
+                    </li>
+                   
+                    <br /><br />
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+</div>
+
+<div class="fixed-bottom container-fluid bg-light" style="margin-top: 120px">
+    <div class="  left-wrapper box-shadow"
+        style="border-radius : 6px; box-shadow: 0px 2px 8px -2px rgba(31,45,61,0.4); padding-top: 10px; padding-bottom: 10px;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="custom-control custom-checkbox">
+                    <div class="custom-control custom-checkbox ">
+                        <form>
+                            <input type="checkbox" class="custom-control-input" id="accept-agreement"
+                                name="accept-agreement-checkbox" (change)="changeQuickBookState($event)" />
+                            <label class="custom-control-label" for="accept-agreement">
+                                <span style="color  :#1f2d3d; font-size : 12px; font-weight : 500">
+                                    {{'cardetail.s_228'|translate}}
+                                </span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="add-to-cart " style="padding-top: 6%">
+                    <button type="button" class="btn btn-success" (click)="changeState()"  id="quick"  disabled>
+                        {{'cardetail.b_242'|translate}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-upload-file></app-upload-file>
+<app-login-modal></app-login-modal>

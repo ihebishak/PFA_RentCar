@@ -1,0 +1,86 @@
+<div class="background">
+  <div class="dashboard-header row bg-dark ">
+    <div class="col-10 col-md-10 col-sm-10">
+      <h1>DASHBOARD</h1>
+    </div>
+    <div class="col-2 col-md-2 col-sm-2 text-center" style="cursor: pointer;" routerLink="">
+      <h2 class="fas fa-arrow-circle-left"></h2>
+      <h5>Back to Home</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-sm-3 col-10 card dashboard-menu shadow-sm p-3 mb-5 bg-white rounded">
+      <div class="card-header">
+        <h3> {{'dashboard.h_6'|translate}} {{userName}} </h3>
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush ">
+          <a routerLink="/dashboard">
+            <li class="list-group-item">
+              <h5 class="far fa-user-circle"> {{'dashboard.h_12'|translate}}</h5>
+            </li>
+          </a>
+          <a routerLink="/dashboard/bookings">
+            <li class="list-group-item">
+              <h5 class="far fa-calendar-alt"> {{'dashboard.h_17'|translate}}</h5>
+            </li>
+          </a>
+          <a routerLink="/dashboard/wallet">
+            <li class="list-group-item">
+              <h5 class="far fa-money-bill-alt"> {{'dashboard.h_22'|translate}}</h5>
+            </li>
+          </a>
+          <a routerLink="/dashboard/bank-detail">
+            <li class="list-group-item">
+              <h5 class="far fa-credit-card"> {{'dashboard.h_27'|translate}}</h5>
+            </li>
+          </a>
+          <a routerLink="/dashboard/change-password">
+            <li class="list-group-item">
+              <h5 class="fab fa-keycdn"> {{'dashboard.h_32'|translate}}</h5>
+            </li>
+          </a>
+          <a routerLink="/dashboard/logout" (click)="logout()">
+            <li class="list-group-item">
+              <h5 class="fas fa-sign-out-alt"> {{'dashboard.h_37'|translate}}</h5>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="col-md-8 col-sm-8 col-12 descr">
+      <!-- <app-bank-details></app-bank-details> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!--logout modal-->
+  <div class="container">
+    <div class="modal" id="logoutModalMsg" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="redirectAfterLogout()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{'dashboard.d_63'|translate}}
+
+          </div>
+          <div class="modal-footer">
+
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="redirectAfterLogout()">
+              {{'dashboard.b_70'|translate}}
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

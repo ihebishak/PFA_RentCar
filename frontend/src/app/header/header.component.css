@@ -1,0 +1,447 @@
+
+ body {
+	 font-family: 'Poppins', sans-serif;
+	 background: #fafafa;
+}
+ p {
+	 font-family: 'Poppins', sans-serif;
+	 font-size: 1.1em;
+	 font-weight: 300;
+	 line-height: 1.7em;
+	 color: #999;
+}
+ a, a:hover, a:focus {
+	 color: inherit;
+	 text-decoration: none;
+	 transition: all 0.3s;
+}
+ .navbar {
+	 padding: 15px 10px;
+	 background: #fff;
+	 border: none;
+	 border-radius: 0;
+	 box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+ .navbar-btn {
+	 box-shadow: none;
+	 outline: none !important;
+	 border: none;
+}
+ .line {
+	 width: 100%;
+	 height: 1px;
+	 border-bottom: 1px dashed #ddd;
+	 margin: 40px 0;
+}
+/* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
+/*#7386D5*/
+/*#6d7fcc*/
+/*#47748b*/
+/*#fff*/
+/*#fff*/
+
+
+
+ .text-sidebar {
+	 color: #6b6b6b;}
+
+ a[data-toggle="collapse"] {
+	 position: relative;
+}
+ .dropdown-toggle::after {
+	 display: block;
+	 position: absolute;
+	 top: 50%;
+	 right: 20px;
+	 transform: translateY(-50%);
+}
+ ul ul a {
+	 font-size: 0.9em !important;
+	 padding-left: 30px !important;
+	 background: #e5b200;
+}
+ ul.CTAs {
+	 padding: 20px;
+}
+ ul.CTAs a {
+	 text-align: center;
+	 font-size: 0.9em !important;
+	 display: block;
+	 border-radius: 5px;
+	 margin-bottom: 5px;
+}
+ a.download {
+	 background: #6b6b6b;
+	 color: #ffcc19;
+}
+ a.article, a.article:hover {
+	 background: #e5b200 !important;
+	 color: #6b6b6b !important;
+}
+/* --------------------------------------------------- CONTENT STYLE ----------------------------------------------------- */
+ #content {
+	 width: 100%;
+	 padding: 20px;
+	 min-height: 100vh;
+	 transition: all 0.3s;
+}
+/* --------------------------------------------------- MEDIAQUERIES ----------------------------------------------------- */
+ @media (max-width: 768px) {
+	 #sidebar {
+		 margin-left: -250px;
+	}
+	 #sidebar.active {
+		 margin-left: 0;
+	}
+	 #sidebarCollapse span {
+		 display: none;
+	}
+}
+agm-map {
+	height: 300px;
+  }
+  .fa-cog {
+	color:pink;
+  }
+  .cursor-pointer {
+	cursor: pointer;
+	text-align: center;
+  }
+  
+  .text-background {
+	margin-left: 1%;
+	text-align: center;
+	padding: 10px;
+  }
+
+  .ng-valid[required], .ng-valid.required  {
+	border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+	border-left: 5px solid #a94442; /* red */
+  }
+
+
+
+
+  
+/* #box:hover{
+  background-color: darkslategrey;
+
+}
+#footer{
+    /* background-color: rgb(14, 20, 20); */
+    /* height: 130px;
+  
+  }
+  
+  #btn{
+    height: 130px;
+    width: 160px;
+    background-color:  rgb(14, 20, 20);
+    border: none;
+    
+    
+  }
+  
+  #btn:hover{
+    background-color:#6b6b6b;
+  }
+  
+  #txt{
+    
+    margin-left: -9px;
+    
+    font-style: italic;
+  }
+  
+  #carIcon{
+    margin-top:-10%;
+  }
+  
+  #footlower{
+    text-align: center;
+    /* background-color: rgb(14, 20, 20); */
+    /* height: 300px;
+    width: 100%;
+  }
+
+  .fas{
+    color: white;
+    font-size: 250%;
+    margin-left: 35%;
+  }
+  .footer-icon-text
+  {
+    color: white;
+    text-align: center;
+  }
+button{
+  background: transparent;
+  border: 0 transparent;
+} */ 
+
+
+.footer-top { padding: 60px 0; background: #333; text-align: left; color: #aaa; }
+.footer-top h3 { padding-bottom: 10px; color: #fff; }
+
+.footer-about img.logo-footer { max-width: 74px; margin-top: 0; margin-bottom: 18px; }
+.footer-about p a { border: 0; }
+.footer-about p a:hover, .footer-about p a:focus { border: 0; }
+
+.footer-contact p { word-wrap: break-word; }
+.footer-contact i { padding-right: 10px; font-size: 18px; color: #666; }
+.footer-contact p a { border: 0; }
+.footer-contact p a:hover, .footer-contact p a:focus { border: 0; }
+
+.footer-links a { color: #aaa; border: 0; }
+.footer-links a:hover, .footer-links a:focus { color: #fff; }
+
+.footer-bottom { padding: 15px 0 17px 0; background: #444; text-align: left; color: #aaa; }
+
+.footer-social { padding-top: 3px; text-align: right; }
+.footer-social a { margin-left: 20px; color: #777; border: 0; }
+.footer-social a:hover, .footer-social a:focus { color: #79a05f; border: 0; }
+.footer-social i { font-size: 24px; vertical-align: middle; }
+
+.footer-copyright { padding-top: 5px; }
+.footer-copyright a { color: #fff; border: 0; }
+.footer-copyright a:hover, .footer-copyright a:focus { color: #aaa; border: 0; }
+
+
+
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color:white;
+  
+  
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+
+.dropdown{
+	margin-top: 25px;
+	 text-align: center;
+ }
+ .textalign{
+	 margin-top: 25px;
+	 text-align: center;
+	 
+ }
+ .btn-col {
+	 border: 1px solid black;
+	 background-color: white;
+	 color:green;
+	 padding: 14px 28px;
+	 font-size: 16px;
+	 cursor: pointer;
+   }
+   .advantage{
+	 margin-top: 20px;
+	 text-align: center;
+	 margin-bottom: 20px;
+   }
+   .colors{
+	 background-color: grey;
+	 height: 17px;
+	 margin: 20px;
+   }
+   .blog-box {text-align: center; margin-bottom: 20px;}
+ .blog-box h3 { margin:20px 0; font-size:22px; color:#000;}
+ .blog-box p { color:#666; }
+ .blog-box span, .posted-on span { font-style: italic; color:#000; }
+ .blog-box img
+  { 
+   width:  100px;
+   height: 100px;
+   background-position: 50% 50%;
+   background-repeat:   no-repeat;
+   background-size:     cover;
+   
+ }
+ .card img{
+   
+   height: 80px;
+   width: 150px;
+   background-position: 50% 50%;
+   background-repeat:   no-repeat;
+   background-size:     cover;
+   
+ 
+ }
+ #drop1:hover{
+   background-color: cornflowerblue;
+   color: aliceblue;
+ 
+ 
+ }
+ .img-container{
+   text-align: center;
+ }
+
+
+* {
+ box-sizing: border-box;
+}
+
+
+
+.heading {
+ font-size: 25px;
+ margin-right: 25px;
+}
+
+.fa {
+ font-size: 25px;
+}
+
+.checked {
+ color: orange;
+}
+
+/* Three column layout */
+.side {
+ float: left;
+ width: 15%;
+ margin-top: 10px;
+}
+
+.middle {
+ float: left;
+ width: 70%;
+ margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+ text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+/* The bar container */
+.bar-container {
+ width: 100%;
+ background-color: #f1f1f1;
+ text-align: center;
+ color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+ .side, .middle {
+   width: 100%;
+ }
+ /* Hide the right column on small screens */
+ .right {
+   display: none;
+ }
+}
+
+
+
+
+
+.flip-card {
+ background-color: transparent;
+ width: 300px;
+ height: 200px;
+ border: 1px solid #f1f1f1;
+ perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ transition: transform 0.8s;
+ transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+ transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+ background-color: #bbb;
+ color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+ background-color: dodgerblue;
+ color: white;
+ transform: rotateY(180deg);
+}
+ 
+
+
+
+.containermm {
+	position: relative;
+	width: 100%;
+  }
+  
+  /* Make the image responsive */
+  .containermm img {
+	width: 100%;
+	height: auto;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .containermm .btn {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: #555;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+  }
+  
+  .containermm .btn:hover {
+	background-color: black;
+  }

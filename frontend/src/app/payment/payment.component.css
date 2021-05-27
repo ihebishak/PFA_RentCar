@@ -1,0 +1,122 @@
+.form-control {
+    height: 30px;
+    margin: 0 0 13px 0;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.form-radio {
+    border: 1px #000 solid;
+    padding: 5px;
+    border-radius: 2px;
+    margin: 0 0 15px 0
+}
+
+.inner-form {
+    margin: 0 0 0 20px;
+    transition-delay: 1s
+}
+
+input {
+    font-size: 12px
+}
+
+.main {
+    background: #eeecec;
+    margin: auto;
+}
+
+.card-name ,.paypal-name,.wallet-text{
+    font-family: 'Courier New', Courier, monospace;
+    color: navy;
+    font-weight: 800;
+}
+
+.bg-success {
+    color: #fff
+}
+
+.pay-button {
+    margin: 25px 300px;
+    height: 35px;
+    width: 100px;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #fff;
+    vertical-align: middle;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.cardView {
+    background-image: url('/assets/sea.jpg');
+    background-size: cover;
+    height: 170px;
+    margin: auto;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.cardChip {
+    position: relative;
+    top: 25px;
+    left: 30px;
+}
+
+.cardNumberStyle {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    font-size: 20px;
+    font-style: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.expiryDateStyle {
+    position: relative;
+    top: 90px;
+    left: 45px;
+    font-size: 10px;
+}
+
+.holderNameStyle {
+    position: relative;
+    top: 110px;
+    left: -90px;
+}
+
+.card-logo-style {
+    padding: 20px;
+}
+
+.main-container {
+    margin: 20px 0 0 20px;
+}
+
+.edit-label, .delete-label {
+    cursor: pointer;
+}
+
+table{
+    text-align: center;
+    width:80%;
+}
+th{
+    color: gray;
+    font-weight: 500;
+}
+th,td{
+    text-align: center;
+}
+.fare-summary{
+    background: #eeecec;
+    height: fit-content;
+    width: fit-content;
+}
+.payment-header{
+    background: linear-gradient(to right, #3aa5c5 , #6eaabd );
+    background: #1d1a17;
+    padding: 2%;
+    color: white;
+}
+

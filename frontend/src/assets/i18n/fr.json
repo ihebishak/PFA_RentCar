@@ -1,0 +1,193 @@
+{
+
+    "footer":
+    {
+        "p_8" : "Nous sommes une jeune entreprise toujours à la recherche d'idées nouvelles et créatives pour vous aider avec nos produits dans votre travail quotidien.",
+        "p_10": "Notre équipe",
+        "img_15" : "Contacts",
+        "p_18" : "Téléphoner: +917347299442",
+        "p_19" : "Email:",
+        "p_20":  "Skype: you_online",
+        "h_25" : "Changer la langue du site Web",
+        "p_30" : "Domicile",
+        "p_31" : "Caractéristiques",
+        "p_32" : "About",
+        "p_33" : "Policies",
+        "p_36" : "Plans",
+        "p_37" : "Affiliates",
+        "p_38" : "Terms"
+
+
+    },
+    "pro":
+    {
+        "a_01": "informations personnelles",
+        "a_02": "Nom et prénom",
+        "a_03": "Numéro de portable",
+        "a_04": "E-mail ID",
+        "a_05": "Importer la licence"
+    },
+
+    "header":
+    {
+        "a_11" : "Domicile",
+        "a_15" : "About",
+        "a_19" : "About",
+        "a_23" : "À propos",
+        "h_139" : "Pickup location",
+        "l_155" : "Enter address",
+        "h_214" : "Bienvenue chez Enet'car"
+
+
+
+    },
+
+    "car-select":
+    {
+        "h_11" : "Sélectionnez votre pack carburant",
+        "b_15" : "Sans carburant",
+        "b_17" : "Avec du carburant",
+        "p_21" : "Paquet actuel",
+        "b_22" : "Pas de carburant",
+        "l_25" : "Vous serez facturé au km parcouru à la fin du voyage.",
+        "l_27" : "Vous ne serez pas remboursé pour les frais de carburant.",
+        "l_28" : "Vous devez rendre la voiture avec la même quantité de carburant que lors de la prise en charge",
+        "p_36" : "Paquet actuel",
+        "s_52" : "Filtre",
+        "a_53" : "Tout effacer",
+        "p_55" : "Type de voiture",
+        "p_69" : "Type de transmission",
+        "b_73" : "Manuel",
+        "b_75" : "Automatique",
+        "b_78" : "Type de carburant",
+        "b_90" : "Appliquer des filtres",
+        "s_147": "Choisir",
+        "a_151": "Prix croissant",
+        "a_152": "Prix - décroissant",
+        "b_171": "Aperçu rapide" ,
+        "b_141": "Trier par "
+
+
+    },
+
+    "cardetail" : 
+
+        {
+            "p_27" : " Remarque: l'image est uniquement à des fins de représentation. La couleur de la voiture réelle peut varier",
+            "b_47" : "Pack de carburant sélectionné",
+            "d_73" : "  Ramassage et dépôt",
+            "d_158" :"Directives et politiques",
+            "l_163" : " Veuillez apporter votre permis de conduire original avec une pièce d'identité supplémentaire lorsque vous venez chercher votre véhicule",
+            "l_167" : " Votre licence doit être vérifiée par notre système avant de commencer votre voyage, sinon votre voyage sera annulé",
+            "l_171" : " Nos voitures ont une limite de vitesse maximale de 120 km / h. Un excès de vitesse entraînera des amendes",
+            "l_174" : "  Nos voitures ont une limite de vitesse maximale de 120 km / h. Un excès de vitesse entraînera des amendes",
+            "l_175": "si vous prévoyez de voyager hors de l'État, veuillez vous assurer de prendre les permis d'État requis",
+            "d_185" : "Détails du tarif",
+            "s_228" : "  Pilote, vous n'êtes plus qu'à une étape de la confirmation de votre réservation. Confirmez que vous avez plus de 21 ans et que vous acceptez toutes les conditions mentionnées dans",
+            "b_242" : "Quick Book",
+            "s_208" : "Total"
+
+
+
+
+        },
+
+      "upload-file":
+      {
+          "h_17":"Fournir des informations",
+          "h_23":"Importer la licence",
+          "l_25":"Importer des images recto et verso claires du permis de conduire original",
+          "l_26":"La photo, le numéro de licence et la date de naissance doivent être clairement visibles",
+          "l_27":"  Un permis 4 roues valide est obligatoire pour conduire une voiture et un 2 roues valide pour conduire un vélo",
+          "l_28":"La licence d'apprenant n'est pas une preuve d'identité gouvernementale valide",
+          "l_29":"Une fois qu'une licence est liée à un compte, elle ne peut pas être modifiée.",
+          "d_38":"Importer l'image avant",
+          "d_44":"Importer l'image de retour",
+          "b_80":"  Importer la licence"
+      },
+      "payment":
+      {
+          "b_2":"Toutes nos félicitations",
+          "h_8":"Détails de la facturation",
+          "l_10":"Prénom",
+          "l_12":"Nom de famille",
+          "l_14":"Identifiant de messagerie",
+          "h_19":"Options de paiement",
+          "l_75":"Éditer",
+          "l_76":"Effacer",
+          "s_105":"Portefeuille de voiture",
+          "s_108":"Balance",
+          "h_132":"Modifier la carte",
+          "b_162":" Annuler",
+          "b_163":"Confirmer",
+          "h_174":"Êtes-vous sûr",
+          "p_179":"Voulez-vous vraiment supprimer ces enregistrements? Ce processus ne peut pas être annulé.",
+          "b_182":"Annuler",
+          "b_183":"Effacer"
+      },
+
+      "baners":
+      {
+
+          "a_56" : "Choisissez votre voiture maintenant!",
+          "h_70" : "Avantage Enet'car",
+          "h_186":"Comment fonctionne Enet'car",
+          "p_71":"Nous avons simplifié la location de voitures pour que vous puissiez vous concentrer sur ce qui est important pour vous",
+          "h_83":"Coût du carburant inclus",
+          "p_84":"Ne vous inquiétez pas du kilométrage! Tous les frais de carburant sont inclus. Si vous faites le plein de carburant, nous vous rembourserons!",
+          "h_91":"Pas de frais cachés",
+          "p_92":"Nos prix incluent les taxes et les assurances, ce que vous voyez est ce que vous payez vraiment!",
+          "h_101":"Forfaits de tarification flexi",
+          "p_102":"Une taille ne convient jamais à tous! Choisissez un équilibre entre le temps et les kilomètres qui vous convient le mieux.",
+          "h_109":"Allez n'importe où",
+          "p_110":"Nos voitures ont des permis pour toute la Tunisie. N'oubliez pas de payer les péages et les taxes d'entrée.",
+          "h_117":"Assistance routière 24h / 24, 7j / 7",
+          "p_118":"Nous avons des partenaires pan Tunisia 24 heures sur 24. L'aide n'est jamais loin de vous.",
+          "h_125":"Assurance dommages",
+          "p_126":"Toutes vos réservations incluent une assurance dommages! Conduisez prudemment, mais ne vous inquiétez pas!",
+          "h_137":"DES OFFRES",
+          "p_188":"Conduisez-vous à l'aventure et revenez en 5 étapes simples",
+          "h_202":"LIVRE",
+          "p_203":"Recherchez et réservez une voiture sur notre site!",
+          "h_214":"TÉLÉCHARGER LA LICENCE",
+          "p_215":"Téléchargez votre permis de conduire et payez un petit dépôt de garantie.",
+          "h_223":"OUVRIR",
+          "p_224":"Nous envoyons par mail les détails de votre voiture 20 minutes avant la prise en charge.",
+          "p_234":"ZOOM",
+          "p_235":"Remplissez la liste de contrôle de démarrage. Prenez les clés de la boîte à gants et conduisez.",
+          "h_244":" REVENIR",
+          "p_245":"Ramenez la voiture au même endroit et remplissez la liste de contrôle de fin pour terminer votre voyage",
+          "p_255" : "Notre équipe"
+           
+
+      },
+      "profile":
+      {
+          "l_5" : "Distance totale",
+          "l_7" : "Heures totales",
+          "d_18" : "Nom et prénom",
+          "d_19" : "Email ID",
+          "d_20" : "Numéro de portable",
+          "s_26" : "Éditer",
+          "s_32" : "Éditer",
+          "s_38" : "Éditer",
+          "b_46" : "Télécharger la licence"
+      },
+
+      "dashboard":
+      {
+          "h_6":"salut",
+          "h_12" : "Profil",
+          "h_17" : "Mes réservations",
+      
+          "h_27" : "Mes cartes",
+          "h_32" : "Changer le mot de passe",
+          "h_37" : "Se déconnecter",
+          "h_57" : "Messages",
+          "d_63" : "Vous vous êtes déconnecté avec succès",
+          "b_70" : "Fermer"
+      }
+
+      
+
+}

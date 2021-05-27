@@ -1,0 +1,46 @@
+    
+    <h4>Your Bookings</h4>
+    <hr>
+    <div id="activeBookingContainer" class="booked-container-background">
+        <div class="bg-light"  *ngIf = isActiveBooking>
+        <div class="row shadow p-5 mb-5">
+            <div class="col-md-3 col-sm-3 col-10 main-date-container">
+                <label>{{day[activeBooking.bookingDate.getDay()]}}</label>
+                <h1>{{activeBooking.bookingDate.getDate()}}</h1>
+                <label>{{months[activeBooking.bookingDate.getMonth()]}} {{activeBooking.bookingDate.getFullYear()}}</label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12">
+
+                <table class="table table-responsive">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Car Model</th>
+                        <th scope="col">Car Number</th>
+                        <th scope="col">PickUp Date and Time</th>
+                        <th scope="col">Drop Date and Time</th>
+                        <th scope="col">PickUp and Drop location</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>{{activeBooking.car.carName}}</td>
+                        <td>{{activeBooking.car.id}}</td>
+                        <td>{{activeBooking.fromDate | date : " MMMM d, y hh:mm a"}}</td>
+                      <td> {{activeBooking.tillDate | date : " MMMM d, y hh:mm a"}} </td>
+                      <td>{{activeBooking.car.location}}</td>
+                      </tr>
+
+        
+                     
+                     
+                    </tbody>
+                  </table>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+   

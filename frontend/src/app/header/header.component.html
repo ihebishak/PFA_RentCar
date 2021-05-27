@@ -1,0 +1,416 @@
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <a class="navbar-brand" href="#">ENET'Car</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navb" class="navbar-collapse collapse hide">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">{{'header.a_11'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{'header.a_15'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">{{'header.a_23'|translate}}</a>
+        </li>
+      </ul>
+  
+      <ul class="nav navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <div *ngIf="loginState; else elseBlock">
+            <a class="nav-link" routerLink="/dashboard"
+            ><i
+              class="fa fa-user-circle"
+              aria-hidden="true"
+              style="font-size:30px;color: midnightblue;border-radius: 50%;background-color: white;"
+            ></i></a
+        >
+          </div>
+          <ng-template #elseBlock
+            >
+          <a
+          class="nav-link"
+          data-toggle="modal"
+          data-target="#myModal"
+        
+          ><i
+            class="fa fa-user-circle"
+            aria-hidden="true"
+            style="font-size:30px;"
+          ></i
+        ></a>
+        </ng-template>
+        </li>
+      
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+
+      <div class="modal-content">
+        <div
+          class="modal-header"
+          style="background-color:midnightblue ; color: white;"
+        >
+          <!-- <div class="modal-header" > -->
+          <h4 class="modal-title">
+             LOGIN
+          </h4>
+          <button
+            type="button"
+            class="close"
+            style="color: white;"
+            data-dismiss="modal"
+          >
+            &times;
+          </button>
+        </div>
+        <div>
+          <br />
+          <h6 style="text-align: center;">Welcome To Enet'Car</h6>
+        </div>
+        <form style="width: 90%;margin-left: 5%;">
+          <div class="form-group">
+            <span id="emailText" style="font-size: 12px;">Email address{{isLoginValid}}</span>
+            <input
+              type="email"
+              class="form-control"
+              id="loginEmail"
+              name="email"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              [(ngModel)] = "validMail"
+              (input) = "validateLoginEmail()"
+            />
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+
+            <span id="passwordText" style="font-size: 12px;">Password{{isLoginPasswordValid}}
+                </span>
+            <input
+              type="password"
+              class="form-control"
+              id="loginPassword"
+              aria-describedby="emailHelp"
+              placeholder="Enter password"
+              (input) = "validatePassword()"
+              
+            />
+            <br />
+            <button
+              type="button"
+              class="btn btn-success"
+              style="width: 100%;"
+              [disabled]="(!isLoginvalid && !isLoginPasswordValid)"
+              id="signInBtn"
+              (click)="userLogin()"
+            >
+              Login
+            </button>
+            <br /><br />
+           
+            <hr />
+            <div class="text-center" style="font-size: 14px;">
+              New to Enet'Car?
+            </div>
+            <br />
+            <div class="text-center">
+              <button
+                type="button"
+                class="btn btn-success"
+                data-toggle="modal"
+                data-target="#signUpModal"
+                (click)="closeLoginModal()"
+              >
+                Sign Up
+              </button>
+              <br />
+              <br />
+            </div>
+            
+            <br />
+          
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<!--login message modal-->
+
+  <div class="modal" id="loginModalMsg" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Message</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="loginState;else loginElse">
+         You have successfully logged in...
+          </div>
+          <ng-template #loginElse>
+              E-Mail or Password incorrect...
+          </ng-template>
+        </div>
+        <div class="modal-footer">
+            
+       
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title " id="exampleModalLongTitle">
+              <div class="text-center">Enter Details to Sign Up</div>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form #signUpForm = "ngForm">
+            <div class="form-group">
+              <span style="font-size: 12px;">Email address</span>
+              <input
+                id="signUpEmail"
+                type="email"
+                placeholder="Enter email"
+                class="form-control"
+                required
+                [(ngModel)] = "signUpEmail"
+                name = "email"
+                #mail= "ngModel"
+                (input)="validateEmail()"
+              />
+              <div [hidden]="mail.valid || mail.pristine"
+              class="alert alert-danger">
+              Email is required
+              </div>
+              <div [hidden]="isEmailValid"
+              class="alert alert-danger">
+              Invalid Email
+              </div>
+              <div *ngIf="(mail.valid || mail.pristine)"><br></div>
+              <span style="font-size: 12px;">Full Name</span>
+              <input
+                id="signUpName"
+                type="text"
+                placeholder="Enter name"
+                class="form-control"
+                required
+                [(ngModel)] = "signUpName"
+                name = "userName"
+                #userName = "ngModel"
+              />
+              <div [hidden]="userName.valid || userName.pristine"
+              class="alert alert-danger">
+              Name is required
+              </div>
+              <div *ngIf="(userName.valid || userName.pristine)"><br></div>
+              <span style="font-size: 12px;">Mobile Number</span>
+              <input
+                id="signUpMobile"
+                type="text"
+                placeholder="Enter mobile"
+                class="form-control"
+                required
+                [(ngModel)] = "signUpMobile"
+                name = "mobile"
+                #userMobile= "ngModel"
+              />
+              <div [hidden]="userMobile.valid || userMobile.pristine"
+              class="alert alert-danger">
+              Mobile is required
+              </div>
+              <div *ngIf="(userMobile.valid || userMobile.pristine)"><br></div>
+              <span style="font-size: 12px;">Password</span>
+              <input
+                id="signUpPassword"
+                type="password"
+                placeholder="Enter password"
+                class="form-control"
+                required
+                [(ngModel)] = "signUpPassword"
+                name = "password"
+                #userPassword= "ngModel"
+              />
+              <div [hidden]="userPassword.valid || userPassword.pristine"
+              class="alert alert-danger">
+              Please enter password
+              </div>
+              <div *ngIf="(userPassword.valid || userPassword.pristine)"><br></div>
+
+              <span style="font-size: 12px;">Re-Enter Password</span>
+              <input
+                id="signUpPasswordEnter"
+                type="password"
+                placeholder="Re-Enter password"
+                class="form-control"
+                required
+                [(ngModel)] = "signUpRePassword"
+                name = "rePassword"
+                #userRePassword= "ngModel"
+              />
+
+            
+
+
+              <div [hidden]="userRePassword.valid || userRePassword.pristine"
+              class="alert alert-danger">
+              Please Re-enter password
+              </div>
+              <div [hidden]= " (signUpPassword == signUpRePassword)"
+              class="alert alert-danger">
+              Passwords do not match
+              </div>
+            </div>
+          
+            
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              (click)="createNewUser()"
+              [disabled]="!signUpForm.form.valid  || !(signUpPassword == signUpRePassword) || !isEmailValid"
+            >
+              Proceed
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="containermm">
+
+ 
+      <img src="./assets/welcome-car.jpeg"  style="width: 100%;">
+   
+    
+ 
+    <button type="button" class="btn btn-secondary btn-lg" routerLink="/car" style="">{{'baners.a_56'|translate}}</button>
+      
+
+    </div>
+  
+      
+    <div class="advantage" id="features">
+      <h3 style="color: cadetblue;">{{'baners.h_70'|translate}}</h3>
+      <p>{{'baners.p_71'|translate}}</p>
+    </div>
+        
+    
+    <section class="featured-blog mtb-40  col-sm-12 col-md-12">
+      <div class="container " style="width: 100%;">
+        <div class="row ">
+          <div class="col-md-4 item col-sm-4">
+            <div class="blog-box">
+              <img src="assets/fuel.png" alt="blog1" />
+              <h3>{{'baners.h_83'|translate}}</h3>
+              <p> {{'baners.p_84'|translate}}</p>
+            </div>
+          </div>
+          <div class="col-md-4 item col-sm-4">
+            <div class="blog-box">
+              <img src="assets/hiddenfees.png" alt="blog1" />
+              <h3>{{'baners.h_91'|translate}}
+              </h3>
+              <p>{{'baners.p_92'|translate}}</p>
+    
+    
+            </div>
+          </div>
+          <div class="col-md-4 item  col-sm-4">
+            <div class="blog-box">
+              <img src="assets/packages.png" alt="blog1" />
+              <h3>{{'baners.h_101'|translate}}</h3>
+              <p>{{'baners.p_102'|translate}}</p>
+    
+            </div>
+          </div>
+          <div class="col-md-4 item col-sm-4">
+            <div class="blog-box">
+              <img src="assets/anywhere.jpg" alt="blog1" />
+              <h3>{{'baners.h_109'|translate}}
+              </h3>
+              <p>{{'baners.p_110'|translate}}</p>
+    
+            </div>
+          </div>
+          <div class="col-md-4 item col-sm-4">
+            <div class="blog-box">
+              <img src="assets/assistance.png" alt="blog1" />
+              <h3>{{'baners.h_117'|translate}}
+              </h3>
+              <p>{{'baners.p_118'|translate}}</p>
+    
+            </div>
+          </div>
+          <div class="col-md-4 item col-sm-4">
+            <div class="blog-box">
+              <img src="assets/damage.png" alt="blog1" />
+              <h3>{{'baners.h_125'|translate}}
+              </h3>
+              <p>{{'baners.p_126'|translate}}</p>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+
+
+      

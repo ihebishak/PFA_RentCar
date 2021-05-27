@@ -1,0 +1,35 @@
+.tab{
+    padding: 10px;
+}
+.detail{
+    margin-top: 30px;
+}
+.labelName{
+    margin-right: 10px;
+    color:grey;
+    font-style: bold;
+}
+.detailLabelName{
+    margin-bottom: 20px;
+    color: grey;
+    
+}
+.insideTab{
+    padding: 30px;
+}
+.input-group-text{
+    color: white;
+
+    text-decoration: none ;
+    font-style: bold;
+    cursor: pointer;
+}
+.distanceLabel, .hoursLabel{
+    margin-right: 15px;
+    font-style: bold;
+}
+.upload-license{
+    margin: auto;
+    margin-top:50px;
+}
+

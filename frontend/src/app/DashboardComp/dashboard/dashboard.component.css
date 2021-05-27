@@ -1,0 +1,28 @@
+.dashboard-menu{
+    background: #cfcfcf;
+    margin:auto;
+    margin-top: 20px ;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li:hover{
+    background: lightgray;
+    color: white;
+}
+.descr{
+    margin: auto;
+    margin-top:20px;
+}
+.background{
+    background: rgb(183,220,233);
+    background: linear-gradient(143deg, rgba(181, 217, 230, 0.345) 20%, rgba(152, 163, 168, 0.345) 70%);
+    margin: auto;
+}
+.dashboard-header{
+    background: linear-gradient(to right, #3aa5c5 , #6eaabd );
+    background: #1d1a17;
+    padding: 2%;
+    color: white;
+} 

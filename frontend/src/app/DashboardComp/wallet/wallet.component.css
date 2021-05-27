@@ -1,0 +1,27 @@
+.wallet-balance{
+    color: grey;
+}
+.no-wallet-transaction{
+    background: url('assets/wallet1.png');
+    height: 400px;
+    background-repeat: no-repeat ;
+    background-position: center;
+}
+.no-transc-text{
+ color: gray;
+ margin: 50px 0 0 150px;
+}
+.wallet-transaction{
+    height: 380px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+.credit{
+    background: linear-gradient(to right, #a1ffb8, #eceedb);
+    color:gray;
+    font-weight: 400;
+}
+.debit{
+    background: linear-gradient(to right, #f06969, #ddb1a9);
+    color: white;
+}
